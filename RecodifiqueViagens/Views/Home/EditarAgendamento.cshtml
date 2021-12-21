@@ -1,0 +1,33 @@
+﻿@model RecodifiqueViagens.Models.Agendamento_Destinos
+@{
+    ViewData["Title"] = "EditarAgendamento";
+}
+
+<section class="container">
+
+    <h1 class="my-4">Editar Agendamentos</h1>
+
+    <form action="" method="post">
+        <div class="mb-3">
+            <label class="form-label">Id</label>
+            <input asp-for="Id_Agendamento" type="number" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input asp-for="nome" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Destino</label>
+            <input asp-for="destino" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input asp-for="telefone" type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Forma de Pagamento</label>
+            <input asp-for="formaPagamento" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #6e44ff;">Atualizar</button>
+    </form>
+</section>

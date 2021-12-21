@@ -1,0 +1,31 @@
+footer{
+    font-size: small;
+    text-align: center;
+}
+
+body {
+    background-color: #f3ecec;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+.old_value_promo {
+    font-size: small;
+    color: red;
+    text-decoration: line-through;
+}
+
+.link_navbar {
+    color: azure;
+    text-decoration-line: none;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

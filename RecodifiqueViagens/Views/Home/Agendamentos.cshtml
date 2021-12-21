@@ -1,0 +1,35 @@
+﻿@model IEnumerable<RecodifiqueViagens.Models.Agendamento_Destinos>
+
+@{
+    ViewData["Title"] = "Agendamentos";
+}
+<section class="container">
+    <h1 class="my-4">Agendamentos</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Forma de pagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id_Agendamento</td>
+                    <td>@item.nome</td>
+                    <td>@item.destino</td>
+                    <td>@item.telefone</td>
+                    <td>@item.formaPagamento</td>
+                    <td><a asp-action="EditarAgendamento" asp-route-id="@item.Id_Agendamento"><img src="~/Imagens/Icones/Icon_Edit.png" alt="Editar" width="20px"></a></td>
+                    <td><a asp-action="DeletarAgendamento" asp-route-id="@item.Id_Agendamento"><img src="~/Imagens/Icones/Icon_Trash.png" alt="Deletar" width="20px"></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>

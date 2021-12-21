@@ -1,0 +1,45 @@
+﻿@model RecodifiqueViagens.Models.Cadastro_Mensagem_Contato
+
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<!--Inicio Main-->
+<section class="container">
+    <h1 class="my-4">Contato</h1>
+    <!-- Início do formulário-->
+    <form asp-action="Contato" method="post" class="border rounded-3 p-4">
+        <!--Contato-->
+        <div class="mb-2 row">
+            <!--Nome usado para contato-->
+            <div class="col-5">
+                <label class="form-label">Informe o seu nome:</label>
+                <input asp-for="nomeDeContato" type="text" class="form-control form-control-sm">
+            </div>
+            <!--E-mail-->
+            <div class="col">
+                <label for="exampleInputEmail1" class="form-label">Endereço de e-mail</label>
+                <input asp-for="email" type="email" class="form-control form-control-sm" id="exampleFormControlInput1" placeholder="name@example.com">
+                <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém</div>
+            </div>
+        </div>
+        <!--Mensagem-->
+        <div class="mb-2">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>
+            <textarea asp-for="msg" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+        </div>
+        <div class="mb-2 form-check">
+            <input asp-for="aceitaReceberNot" type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Aceito receber notificações por e-mail</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: #6e44ff;" onclick="alerta()">Enviar</button>
+    </form>
+</section>
+<!-- Fim do formulário-->
+<section class="container">
+    <h2 class="my-4">Administração</h2>
+    <div class="row justify-content-center">
+        <button class="btn btn-secondary col-4 mx-1" style="background-color: #6e44ff; "><a style="color: white;" asp-action="Agendamentos">Agendamentos</a></button>
+        <button class="btn btn-secondary col-4 mx-1" style="background-color: #6e44ff; "><a style="color: white;" asp-action="Mensagens">Mensagens</a></button>
+    </div>
+</section>

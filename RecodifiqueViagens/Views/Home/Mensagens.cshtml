@@ -1,0 +1,36 @@
+﻿@model IEnumerable<RecodifiqueViagens.Models.Cadastro_Mensagem_Contato>
+
+@{
+    ViewData["Title"] = "Mensagens";
+}
+
+<section class="container">
+    <h1 class="my-4">Mensagens</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">msg</th>
+                <th scope="col">Aceita Receber Not.</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id_Msg</td>
+                <td>@item.nomeDeContato</td>
+                <td>@item.email</td>
+                <td>@item.msg</td>
+                <td>@item.aceitaReceberNot</td>
+                <td><a asp-action="EditarMensagens" asp-route-id="@item.Id_Msg"><img src="~/Imagens/Icones/Icon_Edit.png" alt="Editar" width="20px"></a></td>
+                <td><a asp-action="DeletarMensagem" asp-route-id="@item.Id_Msg"><img src="~/Imagens/Icones/Icon_Trash.png" alt="Deletar" width="20px"></a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</section>

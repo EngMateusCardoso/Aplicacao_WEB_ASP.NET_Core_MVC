@@ -1,0 +1,147 @@
+﻿@model RecodifiqueViagens.Models.Agendamento_Destinos
+
+@{
+    ViewData["Title"] = "Promocoes";
+}
+
+<!-- Inicio do Main-->
+<!-- Título-->
+<section class="container">
+    <h1 class="my-4">Promoções</h1>
+</section>
+
+c
+<section class="container">
+    <div class="row">
+        <div class="col-md">
+            <h2 class="text-end">Promoção tenha o melhor ano novo em família! </h2>
+            <p class="text-end">
+                Economize na sua viagem parano o ano novo em Orlando. Leve as crianças para conhecer o Mickey, Pateta e muita mais!
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus rerum dolore cum similique at corrupti pariatur aliquid harum quis. Vel id tempora error, unde odio dolore officia consequatur pariatur deleniti?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis non harum quasi. Placeat quis perferendis eligendi illum minus, dicta corporis harum odio est inventore fugit consectetur eos? Modi, saepe!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur fugit eum dolorem dolore harum debitis aspernatur distinctio accusantium recusandae quam explicabo commodi qui porro, aliquam, obcaecati sapiente similique sed asperiores?
+            </p>
+        </div>
+        <div class="col-md">
+            <div class="shadow-lg card border border-white border-5" style="width: 300px;">
+                <div>
+                    <img class="card-img-top" src="~/Imagens/Destinos/Orlando_01.jpg" alt="Orlando" width="250px">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        -5%
+                        <span class="visually-hidden">Promoção</span>
+                    </span>
+                </div>
+                <h5 class="card-title">Ano novo em Orlando</h5>
+                <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                <p class="card-text mt-0">R$ XX,XXX</p>
+                <button onclick="editarmodal('Orlando')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+</section>
+<!-- Promoção 2-->
+<section class=" container">
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <div class="shadow-lg card border border-white border-5" style="width: 300px;">
+                <div>
+                    <img class="card-img-top" src="~/Imagens/Destinos/Rio_01.jpg" alt="Rio de Janeiro" width="250px">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        -15%
+                        <span class="visually-hidden">Promoção</span>
+                    </span>
+                </div>
+                <h5 class="card-title">Réveillon no Rio</h5>
+                <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                <p class="card-text mt-0">R$ XX,XXX</p>
+                <button onclick="editarmodal('Rio de Janeiro')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+            </div>
+        </div>
+        <div class="col-md">
+            <h2>Melhor Réveillon do Brasil</h2>
+            <p>
+                Já se imaginou passando o Réveillon na cidade maravilhosa? Corra para essa incrível promoção por tempo limitado!
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus rerum dolore cum similique at corrupti pariatur aliquid harum quis. Vel id tempora error, unde odio dolore officia consequatur pariatur deleniti?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis non harum quasi. Placeat quis perferendis eligendi illum minus, dicta corporis harum odio est inventore fugit consectetur eos? Modi, saepe!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur fugit eum dolorem dolore harum debitis aspernatur distinctio accusantium recusandae quam explicabo commodi qui porro, aliquam, obcaecati sapiente similique sed asperiores?
+            </p>
+        </div>
+    </div>
+    <hr>
+</section>
+<!-- Promoção 3-->
+<section class="container">
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <h2 class="text-end"> Carnaval em Salvador</h2>
+            <p class="text-end">
+                Economize reservando a sua vaga no melhor Carnaval do Mundo!
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus rerum dolore cum similique at corrupti pariatur aliquid harum quis. Vel id tempora error, unde odio dolore officia consequatur pariatur deleniti?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis non harum quasi. Placeat quis perferendis eligendi illum minus, dicta corporis harum odio est inventore fugit consectetur eos? Modi, saepe!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur fugit eum dolorem dolore harum debitis aspernatur distinctio accusantium recusandae quam explicabo commodi qui porro, aliquam, obcaecati sapiente similique sed asperiores?
+            </p>
+        </div>
+        <div class="col-md">
+            <div class="shadow-lg card border border-white border-5" style="width: 300px;">
+                <div>
+                    <img class="card-img-top" src="~/Imagens/Destinos/Salvador_01.jpg" alt="Salvador" width="250px">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        -25%
+                        <span class="visually-hidden">Promoção</span>
+                    </span>
+                </div>
+                <h5 class="card-title">Carnaval de Salvador</h5>
+                <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                <p class="card-text mt-0">R$ XX,XXX</p>
+                <button onclick="editarmodal('Salvador')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Inicio do Modal -->
+<div class="modal" id="Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title" id="Modal">Agendar vaga para:_</p>
+                <p class="modal-title" id="DestinoTitulo"> </p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--Ínicio do Formulário-->
+            <form asp-action="Destinos" method="post">
+                <div class="modal-body">
+                    <label class="form-label">Informe seu nome: </label>
+                    <input asp-for="nome" type="text" class="form-control form-control-sm">
+                    <select asp-for="destino" style="display: none;">
+                        <option selected id="DestinoInput"></option>
+                    </select>
+                    <label class="form-label">Telefone</label>
+                    <input asp-for="telefone" type="text" class="form-control form-control-sm" placeholder="(99) 9 9999-9999">
+                    <br>
+                    <select asp-for="formaPagamento" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Forma de pagamento</option>
+                        <option value="Boleto">Boleto</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Depósito">Depósito</option>
+                        <option value="PIX">PIX</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Desistir</button>
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </div>
+            </form>
+            <!--Fim do Formulário-->
+        </div>
+    </div>
+</div>
+<!--Fim Modal-->
+
+<!--Fim Main-->

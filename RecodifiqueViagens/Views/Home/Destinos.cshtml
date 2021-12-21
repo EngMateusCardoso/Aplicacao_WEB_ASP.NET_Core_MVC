@@ -1,0 +1,189 @@
+﻿@model RecodifiqueViagens.Models.Agendamento_Destinos
+
+@{
+    ViewData["Title"] = "Destinos";
+}
+
+<!--Inicio do Main-->
+<!--Titulo-->
+<section class="container">
+    <h1 class="my-4">Destinos</h1>
+</section>
+
+<!--Destinos-->
+<section class="container">
+    <div class="row justify-content-md-center">
+        <!--Menu dos Destinos-->
+        <div class="col-md-auto border">
+            <h4>Categorias</h4>
+            <ul>
+                <li onclick="exibir_estes('Nacional')">Nacionais (5)</li>
+                <li onclick="exibir_estes('Internacional')">Internacionais (7)</li>
+                <li onclick="exibir_estes('Todos')">Todos (12)</li>
+            </ul>
+        </div>
+        <!--grid de destinos-->
+        <div class="col">
+            <div class="row g-3">
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Buenos-Aires_01.jpg" alt="Buenos-Aires">
+                        <h5 class="card-title">Buenos Aires</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Buenos-Aires')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Egito_01.jpg" alt="Egito">
+                        <h5 class="card-title">Egito</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Egito')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Nacional">
+                    <div class="shadow-lg card border border-white border-5" style=" width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Gramado_RS_01.jpg" alt="Gramado">
+                        <h5 class="card-title">Gramado</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Gramado')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Índia_01.jpg" alt="Índia">
+                        <h5 class="card-title">Índia</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Índia')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Moscow_01.jpg" alt="Moscow">
+                        <h5 class="card-title">Moscow</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Moscow')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Nacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Noronha_01.jpg" alt="Noronha">
+                        <h5 class="card-title">Fernando de Noronha</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Noronha')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <div>
+                            <img class="card-img-top" src="~/Imagens/Destinos/Orlando_01.jpg" alt="Orlando">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                -5%
+                                <span class="visually-hidden">Promoção</span>
+                            </span>
+                        </div>
+                        <h5 class="card-title">Orlando</h5>
+                        <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                        <p class="card-text mt-0">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Orlando')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Nacional">
+                    <div class="shadow-lg card border border-white border-5" style=" width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Ouro_Preto_01.jpeg" alt="Ouro Preto">
+                        <h5 class="card-title">Ouro Preto</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Ouro Preto')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style=" width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Paris_01.jpg" alt="Paris">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Paris')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Nacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <div>
+                            <img class="card-img-top" src="~/Imagens/Destinos/Rio_01.jpg" alt="Rio">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                -15%
+                                <span class="visually-hidden">Promoção</span>
+                            </span>
+                        </div>
+                        <h5 class="card-title">Rio de Janeiro</h5>
+                        <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                        <p class="card-text mt-0">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Rio de Janeiro')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Nacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <div>
+                            <img class="card-img-top" src="~/Imagens/Destinos/Salvador_01.jpg" alt="Salvador">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                -25%
+                                <span class="visually-hidden">Promoção</span>
+                            </span>
+                        </div>
+                        <h5 class="card-title">Salvador</h5>
+                        <p class="old_value_promo mb-0">R$ XX,XXX</p>
+                        <p class="card-text mt-0">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Salvador')" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+                <div class="col-md" id="Internacional">
+                    <div class="shadow-lg card border border-white border-5" style="width: 175px;">
+                        <img class="card-img-top" src="~/Imagens/Destinos/Sydney_01.jpg" alt="Sydney">
+                        <h5 class="card-title">Sydney</h5>
+                        <p class="card-text">R$ XX,XXX</p>
+                        <button onclick="editarmodal('Sydney')" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal">Reserve agora!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Inicio do Modal -->
+<div class="modal" id="Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title" id="Modal">Agendar vaga para:_</p>
+                <p class="modal-title" id="DestinoTitulo"> </p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!--Ínicio do Formulário-->
+            <form asp-action="Destinos" method="post">
+                <div class="modal-body">
+                    <label class="form-label">Informe seu nome: </label>
+                    <input asp-for="nome" type="text" class="form-control form-control-sm">
+                    <select asp-for="destino" style="display: none;">
+                        <option selected id="DestinoInput"></option>
+                    </select>
+                    <label class="form-label">Telefone</label>
+                    <input asp-for="telefone" type="text" class="form-control form-control-sm" placeholder="(99) 9 9999-9999">
+                    <br>
+                    <select asp-for="formaPagamento" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <option selected>Forma de pagamento</option>
+                        <option value="Boleto">Boleto</option>
+                        <option value="Cartão de Crédito">Cartão de Crédito</option>
+                        <option value="Depósito">Depósito</option>
+                        <option value="PIX">PIX</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Desistir</button>
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </div>
+            </form>
+            <!--Fim do Formulário-->
+        </div>
+    </div>
+</div>
+<!--Fim Modal-->
+
+<!--Fim do Main-->
