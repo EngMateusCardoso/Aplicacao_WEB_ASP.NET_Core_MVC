@@ -18,5 +18,5 @@
 
 ## Link da aplicação funcional do mesmo site porém em Java e React
 
-https://recodifiqueviagens.netlify.app
+https://recodifiqueviagens.netlify.app <br/>
 Repositório: https://github.com/EngMateusCardoso/recodifiqueviagens-api-spring
